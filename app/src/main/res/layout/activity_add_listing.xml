@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:colorBackground">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- ── SECTION: Basic Info ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Basic Information" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_title"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Listing Title">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_title"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_description"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:hint="Short Description">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_description"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" android:minLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ── SECTION: Accommodation Type ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Accommodation Type" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_accom_type"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Accommodation Type">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/actv_accom_type"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none" android:focusable="true" android:focusableInTouchMode="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_room_count"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:hint="Number of Rooms"
+                android:visibility="gone">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/actv_room_count"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none" android:focusable="true" android:focusableInTouchMode="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_sharing"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:hint="Sharing Arrangement"
+                android:visibility="gone">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/actv_sharing"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none" android:focusable="true" android:focusableInTouchMode="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ── SECTION: Location ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Location" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_location"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Area / Location">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/actv_location"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none" android:focusable="true" android:focusableInTouchMode="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_address"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:hint="Street Address (optional)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_address"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ── SECTION: Pricing ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Pricing (BWP)" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="10dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_price"
+                    style="@style/HomeLinkTextInput" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginEnd="6dp" android:hint="Monthly Rent">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_price"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_deposit"
+                    style="@style/HomeLinkTextInput" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="6dp" android:hint="Deposit">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_deposit"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_security"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:hint="Security/Damage Deposit (optional)"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_security"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ── SECTION: Amenities (chip selection) ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Amenities" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_amenities"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:singleSelection="false" app:chipSpacingHorizontal="4dp"
+                app:chipSpacingVertical="4dp"/>
+
+            <!-- ── SECTION: House Rules ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="House Rules / Additional Notes" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_additional_notes"
+                style="@style/HomeLinkTextInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. No pets, Students only, Quiet hours after 10pm"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_additional_notes"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" android:minLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- ── SECTION: Availability Date ── -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/tv_avail_date"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="No date selected"
+                    android:textColor="?android:textColorSecondary" android:textSize="14sp"/>
+                <Button android:id="@+id/btn_pick_avail_date" style="@style/HomeLinkButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pick Date" android:textSize="13sp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"/>
+            </LinearLayout>
+
+            <!-- ── SECTION: Photos (up to 3) ── -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Property Photos (up to 3)" android:textColor="@color/royal_blue"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginTop="18dp" android:layout_marginBottom="8dp"/>
+
+            <TextView android:id="@+id/tv_photo_status"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Tap a slot to upload a photo. First photo is shown as thumbnail."
+                android:textColor="?android:textColorSecondary" android:textSize="12sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Photo slot row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    android:orientation="vertical">
+                    <ImageView android:id="@+id/iv_photo_preview_1"
+                        android:layout_width="match_parent" android:layout_height="90dp"
+                        android:scaleType="centerCrop" android:background="@color/gray_200"
+                        android:contentDescription="Photo 1" android:visibility="gone"/>
+                    <Button android:id="@+id/btn_pick_photo_1" style="@style/HomeLinkButton.Outline"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Photo 1" android:textSize="12sp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    android:orientation="vertical">
+                    <ImageView android:id="@+id/iv_photo_preview_2"
+                        android:layout_width="match_parent" android:layout_height="90dp"
+                        android:scaleType="centerCrop" android:background="@color/gray_200"
+                        android:contentDescription="Photo 2" android:visibility="gone"/>
+                    <Button android:id="@+id/btn_pick_photo_2" style="@style/HomeLinkButton.Outline"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Photo 2" android:textSize="12sp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <ImageView android:id="@+id/iv_photo_preview_3"
+                        android:layout_width="match_parent" android:layout_height="90dp"
+                        android:scaleType="centerCrop" android:background="@color/gray_200"
+                        android:contentDescription="Photo 3" android:visibility="gone"/>
+                    <Button android:id="@+id/btn_pick_photo_3" style="@style/HomeLinkButton.Outline"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Photo 3" android:textSize="12sp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Submit -->
+            <Button android:id="@+id/btn_submit_listing" style="@style/HomeLinkButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:layout_marginBottom="12dp"
+                android:text="Submit Listing"/>
+
+            <ProgressBar android:id="@+id/progress_bar"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:indeterminateTint="@color/royal_blue"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

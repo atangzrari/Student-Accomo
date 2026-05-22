@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286589805610",
+    "project_id": "homelink-2ca9d",
+    "storage_bucket": "homelink-2ca9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286589805610:android:ca83f164eed0a14a544f53",
+        "android_client_info": {
+          "package_name": "com.bac.homelink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIBaKwam-ze0dZ3106Eb52gciDkvk1Bqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

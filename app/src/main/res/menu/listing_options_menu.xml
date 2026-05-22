@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_edit_listing"
+        android:title="✏️  Edit Listing"
+        android:icon="@drawable/ic_search"/>
+    <item android:id="@+id/menu_toggle_availability"
+        android:title="Toggle Availability"/>
+    <item android:id="@+id/menu_delete_listing"
+        android:title="🗑️  Delete Listing"/>
+</menu>

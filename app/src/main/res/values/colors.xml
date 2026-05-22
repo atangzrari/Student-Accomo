@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="royal_blue">#3D5AFE</color>
+    <color name="royal_blue_dark">#0031CA</color>
+    <color name="royal_blue_light">#8187FF</color>
+    <color name="royal_blue_surface">#E8EAFF</color>
+    <color name="accent_gold">#FFB300</color>
+
+    <!-- Neutrals -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#555577</color>
+    <color name="text_hint">#AAAAAA</color>
+
+    <!-- Dark Mode Text -->
+    <color name="text_primary_dark">#E8EAFF</color>
+    <color name="text_secondary_dark">#9EA7FF</color>
+
+    <!-- Status -->
+    <color name="status_available">#00C853</color>
+    <color name="status_reserved">#D50000</color>
+    <color name="status_unavailable">#FF6D00</color>
+
+    <!-- Dark Mode Surfaces -->
+    <color name="surface_dark">#1C1C2E</color>
+    <color name="surface_dark_elevated">#252540</color>
+    <color name="card_dark">#2A2A45</color>
+
+    <!-- System -->
+    <color name="colorPrimary">#3D5AFE</color>
+    <color name="colorPrimaryDark">#0031CA</color>
+    <color name="colorAccent">#FFB300</color>
+</resources>

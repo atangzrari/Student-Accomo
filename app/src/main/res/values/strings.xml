@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HomeLink</string>
+    <string name="app_tagline">Connecting Students with Landlords</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_bookings">Bookings</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_chat">Chat</string>
+    <string name="search_hint">Search by area, type, price...</string>
+</resources>

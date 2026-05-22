@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/gray_100">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/royal_blue" android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Help students find their perfect stay" android:textColor="@color/white"
+            android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" android:text="Publish clear, nearby stays for BAC students."
+            android:textColor="#CCFFFFFF" android:textSize="13sp"/>
+        <TextView android:id="@+id/tv_count"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="#33FFFFFF" android:padding="8dp"
+            android:text="0 Active Listings" android:textColor="@color/white"
+            android:textSize="13sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp">
+        <Button android:id="@+id/btn_view_students" style="@style/HomeLinkButton.Outline"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:layout_marginEnd="8dp"
+            android:text="Chat Students" android:textSize="13sp"/>
+        <Button android:id="@+id/btn_logout" style="@style/HomeLinkButton.Outline"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Logout" android:textSize="13sp"/>
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="6dp"
+        android:text="Your Listings" android:textColor="@color/text_primary"
+        android:textSize="15sp" android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_my_listings"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="8dp" android:clipToPadding="false"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add_listing"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:text="+ Add Listing" android:textColor="@color/white"
+        app:backgroundTint="@color/royal_blue"
+        app:icon="@drawable/ic_home_search" app:iconTint="@color/white"/>
+</LinearLayout>

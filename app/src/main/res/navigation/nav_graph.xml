@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- Splash -->
+    <fragment android:id="@+id/splashFragment"
+        android:name="com.bac.homelink.presentation.SplashFragment"
+        android:label="Splash">
+        <action android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_splash_to_landlord"
+            app:destination="@id/landlordDashboardFragment"
+            app:popUpTo="@id/splashFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Auth -->
+    <fragment android:id="@+id/loginFragment"
+        android:name="com.bac.homelink.presentation.auth.login.LoginFragment"
+        android:label="Login">
+        <action android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_login_to_landlord"
+            app:destination="@id/landlordDashboardFragment"
+            app:popUpTo="@id/loginFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/registerFragment"
+        android:name="com.bac.homelink.presentation.auth.register.RegisterFragment"
+        android:label="Register">
+        <action android:id="@+id/action_register_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_register_to_landlord"
+            app:destination="@id/landlordDashboardFragment"
+            app:popUpTo="@id/loginFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Student Bottom Nav Tabs -->
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.bac.homelink.presentation.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_detail"
+            app:destination="@id/listingDetailFragment"/>
+        <action android:id="@+id/action_home_to_filter"
+            app:destination="@id/filterFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/myReservationsFragment"
+        android:name="com.bac.homelink.presentation.MyReservationsFragment"
+        android:label="My Bookings"/>
+
+    <fragment android:id="@+id/conversationsFragment"
+        android:name="com.bac.homelink.presentation.chat.ConversationsFragment"
+        android:label="Chat">
+        <action android:id="@+id/action_conversations_to_chat"
+            app:destination="@id/chatFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.bac.homelink.presentation.profile.ProfileFragment"
+        android:label="Profile">
+        <action android:id="@+id/action_profile_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/homeFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Listing Detail -->
+    <fragment android:id="@+id/listingDetailFragment"
+        android:name="com.bac.homelink.presentation.detail.ListingDetailFragment"
+        android:label="Listing Detail">
+        <argument android:name="listing_id"
+            app:argType="integer" android:defaultValue="-1"/>
+        <action android:id="@+id/action_detail_to_reservation"
+            app:destination="@id/reservationFragment"/>
+        <action android:id="@+id/action_detail_to_chat"
+            app:destination="@id/chatFragment"/>
+    </fragment>
+
+    <!-- Filter -->
+    <fragment android:id="@+id/filterFragment"
+        android:name="com.bac.homelink.presentation.FilterFragment"
+        android:label="Filter Listings"/>
+
+    <!-- Reservation Flow -->
+    <fragment android:id="@+id/reservationFragment"
+        android:name="com.bac.homelink.presentation.reservation.ReservationFragment"
+        android:label="Reserve Room">
+        <argument android:name="listing_id"       app:argType="integer" android:defaultValue="-1"/>
+        <argument android:name="listing_title"    app:argType="string"  android:defaultValue=""/>
+        <argument android:name="listing_location" app:argType="string"  android:defaultValue=""/>
+        <argument android:name="deposit_amount"   app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="monthly_rent"     app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="move_in_date"     app:argType="string"  android:defaultValue=""/>
+        <action android:id="@+id/action_reservation_to_receipt"
+            app:destination="@id/receiptFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/receiptFragment"
+        android:name="com.bac.homelink.presentation.ReceiptFragment"
+        android:label="Receipt">
+        <argument android:name="reference_number" app:argType="string"  android:defaultValue=""/>
+        <argument android:name="listing_title"    app:argType="string"  android:defaultValue=""/>
+        <argument android:name="listing_location" app:argType="string"  android:defaultValue=""/>
+        <argument android:name="deposit_amount"   app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="monthly_rent"     app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="student_name"     app:argType="string"  android:defaultValue=""/>
+        <argument android:name="student_id"       app:argType="string"  android:defaultValue=""/>
+        <argument android:name="payment_method"   app:argType="string"  android:defaultValue=""/>
+        <argument android:name="move_in_date"     app:argType="string"  android:defaultValue=""/>
+        <action android:id="@+id/action_receipt_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Chat -->
+    <fragment android:id="@+id/chatFragment"
+        android:name="com.bac.homelink.presentation.chat.ChatFragment"
+        android:label="Chat">
+        <argument android:name="listing_id"     app:argType="integer" android:defaultValue="-1"/>
+        <argument android:name="chat_room_id"   app:argType="string"  android:defaultValue=""/>
+        <argument android:name="landlord_name"  app:argType="string"  android:defaultValue=""/>
+        <argument android:name="landlord_email" app:argType="string"  android:defaultValue=""/>
+    </fragment>
+
+    <!-- Landlord -->
+    <fragment android:id="@+id/landlordDashboardFragment"
+        android:name="com.bac.homelink.presentation.landlord.dashboard.LandlordDashboardFragment"
+        android:label="My Listings">
+        <action android:id="@+id/action_landlord_to_add"
+            app:destination="@id/addListingFragment"/>
+        <action android:id="@+id/action_landlord_to_detail"
+            app:destination="@id/listingDetailFragment"/>
+        <action android:id="@+id/action_landlord_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/landlordDashboardFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_landlord_to_conversations"
+            app:destination="@id/conversationsFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/addListingFragment"
+        android:name="com.bac.homelink.presentation.landlord.addlisting.AddListingFragment"
+        android:label="Add Listing"/>
+
+</navigation>

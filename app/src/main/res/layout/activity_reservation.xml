@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:colorBackground">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Listing summary -->
+            <androidx.cardview.widget.CardView
+                style="@style/HomeLinkCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/royal_blue"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+                    <TextView android:id="@+id/tv_listing_title"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_listing_location"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textColor="#CCFFFFFF" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tv_move_in_date"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:textColor="#CCFFFFFF" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" android:text="Deposit Required"
+                        android:textColor="#AAFFFFFF" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tv_deposit_amount"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Auto-filled student info (read-only) -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:layout_marginBottom="10dp"
+                android:text="Your Details (auto-filled)"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="15sp" android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                style="@style/HomeLinkCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Full Name"
+                            android:textColor="?android:textColorSecondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_name_display"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="?android:textColorPrimary"
+                            android:textSize="13sp" android:textStyle="bold" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Student ID"
+                            android:textColor="?android:textColorSecondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_id_display"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="@color/royal_blue"
+                            android:textSize="13sp" android:textStyle="bold" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="horizontal"
+                        android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Email"
+                            android:textColor="?android:textColorSecondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_email_display"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="?android:textColorPrimary"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Phone"
+                            android:textColor="?android:textColorSecondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_phone_display"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:textColor="?android:textColorPrimary"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Payment method -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:layout_marginBottom="10dp"
+                android:text="Payment confirmation"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="15sp" android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                style="@style/HomeLinkCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RadioGroup android:id="@+id/rg_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <RadioButton android:id="@+id/rbOrange"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:checked="true" android:text="Orange Money"
+                            android:textSize="14sp" android:padding="8dp"/>
+                        <RadioButton android:id="@+id/rbMascom"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="MyZaka (Mascom)"
+                            android:textSize="14sp" android:padding="8dp"/>
+                        <RadioButton android:id="@+id/rbCard"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Debit / Credit Card"
+                            android:textSize="14sp" android:padding="8dp"/>
+                        <RadioButton android:id="@+id/rbCash"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Cash Payment"
+                            android:textSize="14sp" android:padding="8dp"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/royal_blue_surface"
+                        android:padding="12dp"
+                        android:text="Enter card details to confirm the deposit and reserve this room. No real charge is made."
+                        android:textColor="@color/royal_blue"
+                        android:textSize="13sp"/>
+
+                    <!-- Card details (shown only when Card selected) -->
+                    <LinearLayout android:id="@+id/layout_card_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:visibility="visible">
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="@color/gray_200" android:layout_marginBottom="12dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_card_number"
+                            style="@style/HomeLinkTextInput"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:hint="Card Number (16 digits)"
+                            app:startIconDrawable="@drawable/ic_credit_card">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_card_number"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="19"
+                                android:textSize="15sp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_card_expiry"
+                                style="@style/HomeLinkTextInput"
+                                android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:layout_marginEnd="8dp"
+                                android:hint="Expiry (MM/YY)">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_card_expiry"
+                                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                                    android:inputType="number" android:maxLength="5"
+                                    android:textSize="15sp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_card_cvv"
+                                style="@style/HomeLinkTextInput"
+                                android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:layout_marginStart="8dp"
+                                android:hint="CVV"
+                                app:endIconMode="password_toggle">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_card_cvv"
+                                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                                    android:inputType="numberPassword" android:maxLength="3"
+                                    android:textSize="15sp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/royal_blue_surface"
+                            android:padding="10dp"
+                            android:text="Secure card authentication. No real charges are made in sandbox mode."
+                            android:textColor="@color/royal_blue"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button android:id="@+id/btn_confirm_payment"
+                style="@style/HomeLinkButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:layout_marginBottom="16dp"
+                android:text="Confirm &amp; Pay Deposit"/>
+
+            <ProgressBar android:id="@+id/progress_bar"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/royal_blue"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

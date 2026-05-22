@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/gray_100">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_horizontal" android:orientation="vertical" android:padding="18dp">
+
+        <ImageView android:layout_width="72dp" android:layout_height="72dp"
+            android:layout_marginTop="12dp" android:src="@drawable/ic_check_circle"
+            app:tint="@color/status_available" android:contentDescription="Success"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:text="Reservation Confirmed!"
+            android:textColor="@color/status_available" android:textSize="22sp" android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView style="@style/HomeLinkCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@color/royal_blue" android:gravity="center"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="HomeLink" android:textColor="@color/white"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="PAYMENT RECEIPT" android:textColor="#CCFFFFFF" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:id="@+id/tv_status"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:gravity="center" android:paddingBottom="10dp"
+                        android:textColor="@color/status_available" android:textSize="15sp" android:textStyle="bold"/>
+
+                    <!-- Receipt rows -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Reference" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_ref_number"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/royal_blue" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Student" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_name"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Student ID" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_student_id"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Property" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_listing_title"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:gravity="end" android:maxLines="2"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Location" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_location"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Monthly Rent" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_monthly_rent"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Deposit Paid" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_deposit_paid"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/status_available" android:textSize="14sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Payment Method" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_payment_method"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:paddingBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Move-In Date" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_move_in_date"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Payment Date" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tv_payment_date"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button android:id="@+id/btn_share_receipt" style="@style/HomeLinkButton.Outline"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="📤 Share Receipt"/>
+        <Button android:id="@+id/btn_back_home" style="@style/HomeLinkButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:layout_marginBottom="20dp"
+            android:text="Back to Home"/>
+    </LinearLayout>
+</ScrollView>
